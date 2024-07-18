@@ -1,0 +1,11 @@
+{% load static %}
+{% for structure in structures %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Адрес: {{ structure.address }}</h5>
+    <p class="card-text">Координаты: {{ structure.latitude }} {{structure.longitude }}</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+  {% comment %} <img class="card-img-bottom" src={% static "img/vod5.jpg" %}> {% endcomment %}
+</div>
+{% endfor %}
